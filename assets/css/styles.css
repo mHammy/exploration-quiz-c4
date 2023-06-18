@@ -1,0 +1,12 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.quiz-buttons {
+    display: none;
+}
+
+#button5 {
+    display: initial;
+}
