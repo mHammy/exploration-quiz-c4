@@ -12,16 +12,22 @@
         <h1>
             <!-- h1 header above the box with the quiz title -->
         </h1>
+        <p>Time left: <span id="timer"></span></p>
     </header>
     <main>
-        <article id="quiz-container">
-            <div>
+        <article>
+            <div id="quiz-container">
                  <!-- This is the main box for the quiz -->
-                <h2>
+                <h2 id="question"><strong>
+                    Placeholder text
                     <!-- bold h2 for the question -->
-                </h2>
+                </h2></strong>
                 <section>
-                    <!-- Buttons or anchored navs? -->
+                    <button id="button1" class="quiz-buttons"></button>
+                    <button id="button2" class="quiz-buttons"></button>
+                    <button id="button3" class="quiz-buttons"></button>
+                    <button id="button4" class="quiz-buttons"></button>
+                    <button id="button5"><strong>Start</strong></button>
                 </section>
             </div>
         </article>
@@ -29,6 +35,6 @@
     <script src="./assets/js/script.js"></script>
 </body>
 <footer>
-    <!-- Created by line -->
+    <!-- Created by -->
 </footer>
 </html>
