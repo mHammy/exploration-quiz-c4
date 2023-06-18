@@ -1,6 +1,6 @@
 // IF incorrect, take time off the countdown
 var currentIndex = 0;
-var currentTime = 30;
+var currentTime = 60;
 var timer;
 
 // This is the questions that will display for the user
@@ -53,7 +53,6 @@ var questionArray = [
 
 // This function displays the questions and choices based on the currentIndex count
 function displayQuestion() {
-
 var questionH2 = document.getElementById("question");
 
 questionH2.textContent = questionArray[currentIndex].text;

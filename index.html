@@ -10,25 +10,27 @@
 <body>
     <header>
         <h1>
-            <!-- h1 header above the box with the quiz title -->
+            <span class="h1-js">Javascript</span> Skill Exploration <span class="h1-js">Quiz</span>
         </h1>
         <p>Time left: <span id="timer"></span></p>
     </header>
     <main>
-        <article>
-            <div id="quiz-container">
+        <article id="quiz-container">
+            <div id="question-container">
                  <!-- This is the main box for the quiz -->
                 <h2 id="question"><strong>
-                    Placeholder text
+                    Press "start" to begin the timer and see your first question!
                     <!-- bold h2 for the question -->
                 </h2></strong>
-                <section>
-                    <button id="button1" class="quiz-buttons"></button>
-                    <button id="button2" class="quiz-buttons"></button>
-                    <button id="button3" class="quiz-buttons"></button>
-                    <button id="button4" class="quiz-buttons"></button>
-                    <button id="button5"><strong>Start</strong></button>
+                <section id="button-container">
+                        <button id="button1" class="quiz-buttons"></button>
+                        <button id="button2" class="quiz-buttons"></button>
+                        <button id="button3" class="quiz-buttons"></button>
+                        <button id="button4" class="quiz-buttons"></button>
                 </section>
+            </div>
+            <div id="start-container">
+                <button id="button5"><strong>Start</strong></button>
             </div>
         </article>
     </main>
