@@ -27,36 +27,47 @@ header h1 {
 .h1-js {
     color:darkred;
 }
-
+/* This is the "Time Left:"  */
 header p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
-    align-self: flex-end;
-    padding: 5px;
+    padding: 0 8px;
     border: 2px solid black;
+    border-radius: 5px;
+}
+
+#timer {
+    font-weight: 500;
+    background: #343a40;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    user-select: none;
+    transition: all 0.5s ease;
+
+}
+
+.timer-incorrect {
+    background: crimson;
+    transition: all 0.5s ease;
 }
 /* Quiz container section */
-/* main article {
-    display: flex;
-    flex-direction: column;
-    min-width: 500px;
-    min-height: 500px;
-    max-width: 50%;
-    max-height: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    border: 20px groove black;
-} */
 
-
-/*  */
 #question {
+    /* display:none; */
     background: #d3d3d3;
     font-size: 30px;
     margin-bottom: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 #quiz-container {
@@ -67,46 +78,102 @@ header p {
     padding: 20px;
     margin: auto;
     border: 20px groove black;
+    border-radius: 5px;
 }
 
 /* Quiz button section */
 
 #button-container {
-    display: flex;
+    /* display: flex; */
+    display: none;
+    height: 100%;
+    gap: 20px;
     flex-direction: column;
-    border: 2px dotted red;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .quiz-buttons {
-    display: inline-block;
+    flex: 1;
     text-align: start;
-    margin: 20px;
+    margin: 10px;
+    padding: 10px;
     font-size: 25px;
-    height: 40px;
     background: rgb(170, 78, 231);
     color: white;
     word-wrap: break-word;
+    transition: all 0.3s ease;
+
 }
 
 /* This is the section that controls the "start" button  */
 #start-container {
+    /* display:none; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    margin-top: 30%;
-    min-height: 25%;
-    max-height: 100%;
-    border: 1px dotted blue;
-
 }
 
 #button5 {
-    display: none;
-    height: 100px;
-    width: 250px;
+    padding: 10px 100px; 
     font-size: 50px;
-    margin: auto;
+    margin: 100px auto;
+    border: 5px solid black;
+    transition: all 0.3s ease;
+}
+
+/* Results page */
+
+#result-container {
+    display:none;
+}
+
+#result-container h2 {
+    text-align: center;
+    background: #d3d3d3;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#result-container p {
+    background: #d3d3d3;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+footer div {
+    margin: 30px;
+    width: 45vw;
+}
+
+footer div span {
+    opacity: 0;
+    text-align: center;
+    font-size: 50px;
+    width: 45vw;
+    font-weight: 600;
+    margin-top: 30px;
+    padding: 25px;
+    transition: all 1s ease-in-out;
+}
+
+.answer-correct {
+    opacity: 1;
+    background: darkgreen;
+    color: white;
+    border-left: 25px groove lightgreen;
+    transition: all 1s ease-in-out;
+}
+
+.answer-incorrect {
+    opacity: 1;
+    background: darkred;
+    color: white;
+    border-left: 25px groove red;
+    transition: all 1s ease-in-out;
 }
