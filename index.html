@@ -12,15 +12,14 @@
         <h1>
             <span class="h1-js">Javascript</span> Skill Exploration <span class="h1-js">Quiz</span>
         </h1>
-        <p>Time left: <span id="timer"></span></p>
+        <p>Time left: <span id="timer">60</span></p>
     </header>
     <main>
         <article id="quiz-container">
+             <!-- This is the main box for the quiz -->
             <div id="question-container">
-                 <!-- This is the main box for the quiz -->
                 <h2 id="question"><strong>
-                    Press "start" to begin the timer and see your first question!
-                    <!-- bold h2 for the question -->
+                    This quiz is timed, you have 60 seconds to complete the questions. <br><br> When you answer incorrectly, your time will be reduced by <span id="rule-seconds">5 seconds</span>. <br><br> Click "Start" to start the quiz!
                 </h2></strong>
                 <section id="button-container">
                         <button id="button1" class="quiz-buttons"></button>
@@ -32,11 +31,25 @@
             <div id="start-container">
                 <button id="button5"><strong>Start</strong></button>
             </div>
+            <!-- Result container needs a complete design via CSS -->
+            <div id="result-container">
+                <h2>Congratulations!</h2>
+                <p>You earned <span id="total-points"></span> points with <span id="total-correct"></span> out of <span id="total-questions"></span> questions correct with <span id="time-left"></span> seconds left!</p>
+                <form>
+                    <label for="initials">Initials:</label>
+                    <input type="text" id="initials" name="initials" value="MH">
+                    <input type="submit" value="Submit">
+                    <!-- Need to add submit method -->
+                </form>
+            </div>
         </article>
     </main>
-    <script src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/questions.js"></script>
+    <script defer src="./assets/js/script.js"></script>
 </body>
 <footer>
-    <!-- Created by -->
+    <div>
+        <span id="answer-notify">Good luck!</span>
+    </div>
 </footer>
 </html>
