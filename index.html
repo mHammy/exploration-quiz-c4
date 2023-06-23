@@ -21,6 +21,7 @@
                 <h2 id="question"><strong>
                     This quiz is timed, you have 60 seconds to complete the questions. <br><br> When you answer incorrectly, your time will be reduced by <span id="rule-seconds">5 seconds</span>. <br><br> Click "Start" to start the quiz!
                 </h2></strong>
+                <!-- button container -->
                 <section id="button-container">
                         <button id="button1" class="quiz-buttons allbuttons"></button>
                         <button id="button2" class="quiz-buttons allbuttons"></button>
@@ -28,10 +29,11 @@
                         <button id="button4" class="quiz-buttons allbuttons"></button>
                 </section>
             </div>
+            <!-- start screen container -->
             <div id="start-container">
                 <button id="button5" class="allbuttons"><strong>Start</strong></button>
             </div>
-            <!-- Result container needs a complete design via CSS -->
+            <!-- Result container -->
             <div id="result-container">
                 <h2>Congratulations!</h2>
                 <p>You earned <span id="total-points"></span> points with <span id="total-correct"></span> out of <span id="total-questions"></span> questions correct with <span id="time-left"></span> seconds left! <br><br> Please enter your initials below!</p>
@@ -39,7 +41,6 @@
                     <label for="initials">Initials:</label>
                     <input type="text" id="initials" name="initials" value="">
                     <input type="submit" id="button6" class="allbuttons" value="Submit">
-                    <!-- Need to add submit method -->
                 </form>
             </div>
         </article>
@@ -49,7 +50,6 @@
             <span id="answer-notify">Good luck!</span>
         </div>
     </footer>
-    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
