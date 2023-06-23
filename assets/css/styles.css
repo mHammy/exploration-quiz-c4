@@ -205,3 +205,9 @@ form label {
     color: black;
     cursor: pointer;
 }
+
+.quiz-buttons:hover {
+    border: 2px solid black;
+    background: #a173bf;
+    box-shadow: inset 5px 5px 10px white;
+}

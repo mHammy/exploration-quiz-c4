@@ -4,6 +4,10 @@ var currentTime = 60;
 var timeSpent = 0;
 var timer;
 var cAnswer = 0;
+// var userScore; //Ask Tutor
+var userArray = []; //Ask Tutor
+// var existingData = localStorage.getItem('userScore'); //Ask Tutor
+// userArray = existingData ? JSON.parse(existingData): []; //Ask Tutor
 
 
 // Quiz questions and controls
@@ -141,8 +145,11 @@ function endQuiz() {
     return totalPoints;
 }
 
+
+//On submit button click, send to localStorage
 button6.addEventListener("click", function(event) {
     event.preventDefault();
+
     if (initials.value.length < 2 || initials.value.length > 3) {
         alert("Entry must be 2-3 characters");
     } else {
@@ -150,9 +157,8 @@ button6.addEventListener("click", function(event) {
             initials: initials.value,
             highscore: totalPoints.innerText
         };
-    
-        localStorage.setItem("userScore", JSON.stringify(userScore));
+        userArray.push(userScore); //ask tutor
+        localStorage.setItem("userScore", JSON.stringify(userArray));
         location.href = "./highscores.html";
     }
 });
-//Create submit button input and send to localStorage

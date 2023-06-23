@@ -58,6 +58,9 @@ header h1 {
     font-size: 1.5rem;
 
 }
+li {
+    padding: 10px;
+}
 
 #retry-container {
     text-align: center;
