@@ -27,7 +27,7 @@ header h1 {
 .h1-js {
     color:darkred;
 }
-/* This is the "Time Left:"  */
+/* This is the "Time Left:" & Time styles */
 header p {
     display: flex;
     align-items: center;
@@ -145,7 +145,7 @@ header p {
     margin-bottom: 20px;
     padding: 10px;
 }
-
+ /* Answer notifier on the bottom */
 footer div {
     margin: 30px;
     width: 45vw;
@@ -176,4 +176,32 @@ footer div span {
     color: white;
     border-left: 25px groove red;
     transition: all 1s ease-in-out;
+}
+
+/* Form styles */
+form {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+form label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#initials {
+    font-size: 1.5rem;
+}
+
+.allbuttons {
+    box-shadow: 5px 5px 10px black;
+}
+
+.allbuttons:hover {
+    box-shadow: inset 5px 5px 10px black;
+    background: darkgrey;
+    color: black;
+    cursor: pointer;
 }

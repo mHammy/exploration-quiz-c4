@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/highscores.css">
     <title>JS Skills Quiz</title>
 </head>
 <body>
-    
+    <header>
+        <h1>
+            <span class="h1-js">Javascript</span> Skill Exploration <span class="h1-js">Quiz</span>
+        </h1>
+    </header>
+    <main>
+        <article>
+            <div id="high-scores-container">
+                <h2 id="high-scores-h2">HIGH SCORES!</h2>
+                <ol id="score-list"></ol>
+            </div>
+            <div id="retry-container">
+                <button id="retry-button" class="allbuttons">Retry Quiz?</button>
+            </div>
+        </article>
+    </main>
+    <script src="./assets/js/highscores.js"></script>
 </body>
 </html>

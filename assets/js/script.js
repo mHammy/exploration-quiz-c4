@@ -26,6 +26,10 @@ var bContainer = document.querySelector("#button-container");
 var sContainer = document.querySelector("#start-container");
 var rContainer = document.querySelector("#result-container");
 
+//Submit score form
+var button6 = document.getElementById("button6");
+var initials = document.getElementById("initials");
+
 //Timer
 var pTimer = document.getElementById("timer");
 
@@ -35,7 +39,7 @@ button5.addEventListener("click", startQuiz);
 // This function changes display settings and begins the quiz functions.
 function startQuiz() {
     sContainer.setAttribute("style", "display: none");
- bContainer.setAttribute("style", "display: flex");
+    bContainer.setAttribute("style", "display: flex");
     startTimer();
     displayQuestion();
 }
@@ -67,7 +71,7 @@ function displayQuestion () {
         option[i].setAttribute("onclick", "optionSelected(this.textContent)");
     } 
 }
-
+// Verifies the answer
 function optionSelected(answer) {
     var correctAnswer = questionArray[currentIndex].answer;
     var userAnswer = answer;
@@ -134,4 +138,21 @@ function endQuiz() {
     totalCorrect.innerText = cAnswer;
     totalQuestions.innerText = questionArray.length;
     timeLeft.innerText = currentTime - timeSpent;
+    return totalPoints;
 }
+
+button6.addEventListener("click", function(event) {
+    event.preventDefault();
+    if (initials.value.length < 2 || initials.value.length > 3) {
+        alert("Entry must be 2-3 characters");
+    } else {
+        var userScore = {
+            initials: initials.value,
+            highscore: totalPoints.innerText
+        };
+    
+        localStorage.setItem("userScore", JSON.stringify(userScore));
+        location.href = "./highscores.html";
+    }
+});
+//Create submit button input and send to localStorage
