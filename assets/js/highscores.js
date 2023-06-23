@@ -1,20 +1,21 @@
+// Elements required
 scoreList = document.getElementById("score-list");
 retryButton = document.getElementById("retry-button");
 
+// Grabbing the local storage information and throwing it in an array
 var scores = JSON.parse(localStorage.getItem("userScore")) || [];
-var foo = document.createElement("span")
-foo = document.createTextNode("&nbsp;");
 
-addScore();
+
+// addScore();
 displayScore();
 
-function addScore() {
-    scores.sort(function (a, b) {
-        return b.score - a.score;
-    });
+// function addScore() {
+//     scores.sort(function (a, b) {
+//         return b.scores - a.scores;
+//     });
     
-}
-//Ask Tutor
+// };
+
 function displayScore() {
 
     for (i = 0; i < scores.length; i+= 1) {
@@ -23,10 +24,10 @@ function displayScore() {
          scoreList.appendChild(liTag);
     }
 
-}
+};
 
 retryButton.addEventListener("click", function(event) {
     event.preventDefault();
 
     location.href = "./index.html";
-})
+});
