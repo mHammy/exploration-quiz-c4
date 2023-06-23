@@ -4,10 +4,9 @@ var currentTime = 60;
 var timeSpent = 0;
 var timer;
 var cAnswer = 0;
-// var userScore; //Ask Tutor
-var userArray = []; //Ask Tutor
-// var existingData = localStorage.getItem('userScore'); //Ask Tutor
-// userArray = existingData ? JSON.parse(existingData): []; //Ask Tutor
+var userArray = [];
+var existingData = localStorage.getItem('userScore');
+userArray = existingData ? JSON.parse(existingData): [];
 
 
 // Quiz questions and controls
@@ -157,7 +156,7 @@ button6.addEventListener("click", function(event) {
             initials: initials.value,
             highscore: totalPoints.innerText
         };
-        userArray.push(userScore); //ask tutor
+        userArray.push(userScore);
         localStorage.setItem("userScore", JSON.stringify(userArray));
         location.href = "./highscores.html";
     }

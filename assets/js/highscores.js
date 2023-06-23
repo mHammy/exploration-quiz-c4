@@ -2,6 +2,8 @@ scoreList = document.getElementById("score-list");
 retryButton = document.getElementById("retry-button");
 
 var scores = JSON.parse(localStorage.getItem("userScore")) || [];
+var foo = document.createElement("span")
+foo = document.createTextNode("&nbsp;");
 
 addScore();
 displayScore();
@@ -14,13 +16,10 @@ function addScore() {
 }
 //Ask Tutor
 function displayScore() {
-    var li = document.createElement("li")
-    li.textContent = (scores.highscore + " " + "|" + " " + scores.initials);
-    scoreList.appendChild(li);
 
     for (i = 0; i < scores.length; i+= 1) {
         var liTag = document.createElement("li")
-        liTag.textContent = (scores.highscore + " " + "|" + " " + scores.initials);
+        liTag.textContent = (scores[i].highscore + " " + "|" + " " + scores[i].initials);
          scoreList.appendChild(liTag);
     }
 
