@@ -8,12 +8,14 @@ var scores = JSON.parse(localStorage.getItem("userScore")) || [];
 sortScores();
 displayScore();
 
+// This function sorts the scores from high to low on the scoreboard
 function sortScores() {
     scores.sort(function (a, b) {
         return b.highscore- a.highscore;
     });
 };
 
+// This function displays the scores and initials in localStorage
 function displayScore() {
     for (i = 0; i < scores.length; i+= 1) {
         var liTag = document.createElement("li");
@@ -30,7 +32,7 @@ function displayScore() {
 
 };
 
-
+//This sends you back to the beginning of the quiz
 retryButton.addEventListener("click", function(event) {
     event.preventDefault();
 
