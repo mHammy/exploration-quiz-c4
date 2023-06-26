@@ -4,7 +4,7 @@
 
 - My motivation for this application was to code a functioning quiz to test javascript knowledge with 10 questions.
 - I wanted to make sure the score felt impactful on each attempt, so you could compare your previous scores.
-- 
+- This application is a testament of how far I've come already in my ability to code javascript.
 
 
 ![Image of the full website application](./assets/images/eqc4full.png)
