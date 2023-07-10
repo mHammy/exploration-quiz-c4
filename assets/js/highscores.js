@@ -27,9 +27,7 @@ function displayScore() {
         pInitial.textContent = (scores[i].initials);
         liTag.append(pScore, pInitial);
         scoreList.appendChild(liTag);
-        
     }
-
 };
 
 //This sends you back to the beginning of the quiz
